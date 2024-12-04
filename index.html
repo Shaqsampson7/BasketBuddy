@@ -1,116 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-  
-  </style>
-  <title>Basket Buddy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Basket Buddy</title>
+
 </head>
 <body>
-  <header>
- <div class="container">
-      <h1>Welcome Back Buddy!</h1>
-    <p>The ultimate grocery app dedicated to improving your grocery shopping experience. </p>
-      <img src="basket buddy grocery app.jpg" alt="">
-    </div>
-  </header>
-  <nav>
-    <a href="#list">List</a>
-    <a href="Recipes">Recipes</a>
-    <a href="Budget">Budget</a>
-    <a href="Profile">Profile</a>
-  </nav>
-  <main>
-    <h1>Weekly List</h1>
-    <section id="features">
-      <div class="container">
-        <h2>Chicken Breast</h2>
-      </div>
-    </section>
-    <section id="services">
-      <div class="container">
-        <h2>Marinara</h2>
-      </div>
-    </section>
-    <section id="testimonials">
-      <div class="container">
-        <h2>Spaghetti Noodles</h2>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <h2>Italian Bread Crumbs</h2>
-      </div>
-    </section>
-    <h1>Weekly Recipe Trends</h1>
-    <section id="trends">
+<header>
+<div class="container">
+<h1>Basket Buddy</h1>
+<h3>Welcome back Buddy!</h3>
+<p>The ultimate grocery app dedicated to improving your grocery shopping experience.</p>
+</div>
+<img src="basket buddy grocery app.jpg" alt="">
+</header>
+<nav>
+  <a href="https://newportfolio69302.nolioportfolio.com/basketbuddy91257">About</a>
+<a href="#list">List</a>
+<a href="Recipes">Recipes</a>
+<a href="Budget">Budget</a>
+<a href="Profile">Profile</a>
+</nav>
+<main>
+<h1>Weekly List</h1>
+
+<section id="list-form">
+  <form id="list-form">
+    <input type="text" id="list-item" placeholder="Enter new item">
+    <button type="button" onclick="addItem()">Add New Item To Grocery List</button>
+  </form>
+</section>
+<section id="features">
+<div class="container">
+<h2>Chicken Breast</h2>
+</div>
+</section>
+<section id="services">
+<div class="container">
+<h2>Marinara</h2>
+</div>
+</section>
+<section id="testimonials">
+<div class="container">
+<h2>Spaghetti Noodles</h2>
+</div>
+</section>
+<section id="contact">
+<div class="container">
+<h2>Italian Bread Crumbs</h2>
+</div>
+</section>
+<button class="budget-button">Create New Budget</button>
+<h1>Weekly Recipe Trends</h1>
+<section id="trends">
+<div class="container">
+<div class="grid-container">
+<div class="item">
+<img src="chimi small.png" alt="">
+<p>Chimichurri</p>
+</div>
+<div class="item">
+<img src="steak small.png" alt="">
+<p>Steak Frita</p>
+</div>
+<div class="item">
+<img src="Untitled-3.plemon pundcake smallng.png" alt="">
+<p>Lemon Pound Cake</p>
+</div>
+</div>
+</div>
+</section>
+<h1>Favorite Recipes</h1>
+<section id="favorites">
+<div class="container">
+<div class="grid-container">
+<div class="item">
+<img src="teriyski small.png" alt="">
+<p>Chicken Teriyaki</p>
+</div>
+<div class="item">
+<img src="wagyu smal.png" alt="">
+<p>Wagyu Sliders</p>
+</div>
+<div class="item">
+<img src="apple pie small.png" alt="">
+<p>Apple Pie</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<img src="Basket Buddy.png" alt="">
+    <footer>
         <div class="container">
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Chimichurri</p>
-            </div>
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Steak Frita</p>
-            </div>
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Lemon Pound Cake</p>
-            </div>
-          </div>
+            <p>&copy; 2024 Basket Buddy. All rights reserved.</p>
         </div>
-      </section>
-      <h1>Favorite Recipes</h1>
-      <section id="trends">
-        <div class="container">
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Chicken Teriyaki</p>
-            </div>
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Wagyu Sliders</p>
-            </div>
-            <div class="grid-item">
-              <div class="placeholder"></div>
-              <p>Apple Pie</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <button id="create-budget-btn">Create New Budget</button>
-  </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Basket Buddy. All rights reserved.</p>
-    </div>
-  </footer>
-  <script src="scripts.js"></script>
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span id="close-modal" class="close">&times;</span>
-      <p>Not optimized for desktop. Switch to mobile app to create a new budget.</p>
-    </div>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const createBudgetBtn = document.getElementById("create-budget-btn");
-      const modal = document.getElementById("modal");
-      const closeModalBtn = document.getElementById("close-modal");
-  
-      createBudgetBtn.addEventListener("click", function() {
-        modal.style.display = "block";
-      });
-  
-      closeModalBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-      });
-    });
-  </script>
+    </footer>
+    <script src="script.js"></script>
+<footer>
+<div class="container">
+<p>&copy; 2024 Basket Buddy. All rights reserved.</p>
+</div>
+</footer>
+
 </body>
 </html>

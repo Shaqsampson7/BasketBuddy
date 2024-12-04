@@ -1,40 +1,34 @@
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-  
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-  
-  // Sticky navigation bar
-  window.onscroll = function() {stickyNav()};
-  
-  var navbar = document.querySelector('nav');
-  var sticky = navbar.offsetTop;
-  
-  function stickyNav() {
-    if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky");
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  }
- 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const createBudgetBtn = document.getElementById("create-budget-btn");
-    const modal = document.getElementById("modal");
-    const closeModalBtn = document.getElementById("close-modal");
+function addItem() {
+  let newItem = document.getElementById('list-item').value;
+  if (newItem.length < 5) {
+      showModal("*Hello Buddy, let's give your item a bit more detail. Remember, submission must be more than five characters.");
+  } else {
+      // Add the new item to the list section
+      let newSection = document.createElement('section');
+      newSection.innerHTML = '<div class="container"><h2>' + newItem + '</h2></div>';
+      document.getElementById('list-form').insertAdjacentElement('afterend', newSection);
+      
+      // Clear the input field after adding the item
+      document.getElementById('list-item').value = '';
 
-    createBudgetBtn.addEventListener("click", function() {
-      modal.style.display = "block";
-    });
-
-    closeModalBtn.addEventListener("click", function() {
-      modal.style.display = "none";
-    });
-  });
-</script>
+      const image = document.querySelector('img');
+      let direction = 1; // 1 for moving right, -1 for moving left
+      let position = 0;
   
+      function moveImage() {
+          position += direction; // Increment or decrement position based on direction
+          image.style.left = position + 'px';
+  
+          if (position >= window.innerWidth - image.width) {
+              direction = -1; // Change direction to move to the left when reaching the right edge
+          }
+  
+          if (position <= 0) {
+              direction = 1; // Change direction to move to the right when reaching the left edge
+          }
+  
+          requestAnimationFrame(moveImage); // Call moveImage() again for smooth animation
+      }
+  
+      moveImage();
+  };
