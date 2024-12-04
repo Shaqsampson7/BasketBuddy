@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  
+  </style>
+  <title>Basket Buddy</title>
+</head>
+<body>
+  <header>
+ <div class="container">
+      <h1>Welcome Back Buddy!</h1>
+    <p>The ultimate grocery app dedicated to improving your grocery shopping experience. </p>
+      <img src="basket buddy grocery app.jpg" alt="">
+    </div>
+  </header>
+  <nav>
+    <a href="#list">List</a>
+    <a href="Recipes">Recipes</a>
+    <a href="Budget">Budget</a>
+    <a href="Profile">Profile</a>
+  </nav>
+  <main>
+    <h1>Weekly List</h1>
+    <section id="features">
+      <div class="container">
+        <h2>Chicken Breast</h2>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <h2>Marinara</h2>
+      </div>
+    </section>
+    <section id="testimonials">
+      <div class="container">
+        <h2>Spaghetti Noodles</h2>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2>Italian Bread Crumbs</h2>
+      </div>
+    </section>
+    <h1>Weekly Recipe Trends</h1>
+    <section id="trends">
+        <div class="container">
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Chimichurri</p>
+            </div>
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Steak Frita</p>
+            </div>
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Lemon Pound Cake</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h1>Favorite Recipes</h1>
+      <section id="trends">
+        <div class="container">
+          <div class="grid-container">
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Chicken Teriyaki</p>
+            </div>
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Wagyu Sliders</p>
+            </div>
+            <div class="grid-item">
+              <div class="placeholder"></div>
+              <p>Apple Pie</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <button id="create-budget-btn">Create New Budget</button>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Basket Buddy. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <p>Not optimized for desktop. Switch to mobile app to create a new budget.</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const createBudgetBtn = document.getElementById("create-budget-btn");
+      const modal = document.getElementById("modal");
+      const closeModalBtn = document.getElementById("close-modal");
+  
+      createBudgetBtn.addEventListener("click", function() {
+        modal.style.display = "block";
+      });
+  
+      closeModalBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
