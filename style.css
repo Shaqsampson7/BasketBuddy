@@ -140,3 +140,28 @@ footer {
   background-color: #45a049; 
 }
 
+
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  p {
+    font-size: 0.8em;
+  }
+}
